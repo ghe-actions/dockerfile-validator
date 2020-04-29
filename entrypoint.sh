@@ -9,7 +9,7 @@ fi
 
 DOCKERFILE="$1"
 dockerlint() {
-    dockerlint /github/workspace/$1
+    dockerlint $1
 }
 dockerlint $DOCKERFILE
 # if [ -z "${1}" ]; then
