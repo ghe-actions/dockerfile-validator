@@ -6,7 +6,7 @@ branding:
   color: 'green'
 inputs:
   dockerfile: # Dockerfile path
-    required: false
+    required: true
     default: 'Dockerfile'
   lint: # lint option for docker (dockerlint/hadolint)
     required: false
