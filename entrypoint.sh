@@ -1,11 +1,11 @@
 #!/bin/sh
 
 # Check the arguments supplied.
-if [ $# -eq 0 ]
-  then
-    echo "No arguments supplied, exiting..."
-    exit 1
-fi
+# if [ $# -eq 0 ]
+#   then
+#     echo "No arguments supplied, exiting..."
+#     exit 1
+# fi
 
 DOCKERFILE="$1"
 dockerlint() {
