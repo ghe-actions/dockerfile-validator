@@ -1,0 +1,25 @@
+name: 'Dockerfile Validator'
+description: 'Validate a Dockerfile.'
+author: 'gargmukku07'
+branding:
+  icon: 'check'
+  color: 'green'
+inputs:
+  dockerfile: # Dockerfile path
+    required: false
+    default: 'Dockerfile'
+  lint: # lint option for docker (dockerlint/hadolint)
+    required: false
+    default: 'dockerlint'
+  dockerlabelvalidate: # Dockerfile path
+    required: false
+    default: 'yes'
+outputs:
+  time:
+    description: 'The time we greeted you'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.dockerfile }}
+    - ${{ inputs.lint }}
