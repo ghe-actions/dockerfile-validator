@@ -11,7 +11,7 @@ DOCKERFILE="$1"
 dockerlint() {
     dockerlint /github/workspace/$1
 }
-dockerfile $DOCKERFILE
+dockerlint $DOCKERFILE
 # if [ -z "${1}" ]; then
 #   >&2 echo "Unable to find the ${2}. Did you set with.${2}?"
 #   exit 1
