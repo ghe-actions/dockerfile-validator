@@ -16,6 +16,8 @@ This is a GitHub action for running to validate the Dockerfile usign the dockerl
 
 **Optional** Linting tools (dockerlint/hadolint). Default `"dockerlint"`.
 
+For hadolint ignore option, use the `.hadolint.yaml` as per [docs](https://github.com/hadolint/hadolint/blob/master/README.md)
+
 ### `dockerlabelvalidate`
 
 **Yet to be added** Dockerfile label validate. Default `"yes"`.
@@ -23,11 +25,10 @@ This is a GitHub action for running to validate the Dockerfile usign the dockerl
 ## Example usage
 
 ```yaml
-- uses: ghe-actions/dockerfile-validator@v1.4
+- uses: ghe-actions/dockerfile-validator@v1
     with:
-    dockerfile: 'Dockerfile'
-    lint: 'dockerlint'
-    dockerlabelvalidate: 'yes'
+      dockerfile: 'Dockerfile'
+      lint: 'hadolint'
 ```
 
 ## Contact
